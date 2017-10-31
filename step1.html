@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=1200">
+        <meta name="keywords" content=""/>
+        <meta name="description" content="">
+        <meta property="og:image" itemprop="image" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="表單" />
+        <title>表單</title>
+
+        <!-- Global -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+	<body>
+
+        <div class="container py-10">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="assets/img/logo.png" alt="">
+                    <hr>
+                </div>
+            </div>
+            <form>
+                <div class="form-group row">
+                    <div class="col-xs-12">
+                        <div class="radio">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="radio" id="radio1" value="option1" checked>
+                                全部
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="radio" id="radio2" value="option2">
+                                自行挑選單位
+                            </label>
+                        </div>
+                        <div class="text-danger">
+                            ※ 說明：按住Ctrl可複選單位，按住Shift可以範圍選取單位
+                        </div>
+                        <select multiple class="form-control">
+                            <option>001 董事會</option>
+                            <option>002 總經理副總經理室</option>
+                            <option>003 企劃處</option>
+                            <option>004 發電處</option>
+                            <option>005 供電處</option>
+                            <option>006 電力調度處</option>
+                            <option>007 業務處</option>
+                            <option>008 材料處</option>
+                            <option>009 燃料處</option>
+                            <option>010 財務處</option>
+                            <option>011 稽核室（撤銷）</option>
+                            <option>012 公共關係室（撤銷）</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-xs-12">
+                        <a class="btn btn-primary" href="step2.html">確認送出</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Global -->
+		<script src="assets/js/vendor/jquery.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+
+    </body>
+</html>
