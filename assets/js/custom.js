@@ -1,12 +1,15 @@
-$('#tree').tree({
-  dataSource: [
-    { text: '公領域：基本資料', children: [ { text: 'USA', children: [ { text: 'California' }, { text: 'Miami' } ] }, { text: 'Canada' } ] },
-    { text: '私領域', children: [ { text: 'France' },  { text: 'Spain' },  { text: 'Italy' } ] },
-  ],
-  uiLibrary: 'bootstrap',
+var tree = $('#tree').tree({
+    dataSource: [
+        { text: '公領域：基本資料', children: [ { text: 'USA', children: [ { text: 'California' }, { text: 'Miami' } ] }, { text: 'Canada' } ] },
+        { text: '私領域', children: [ { text: 'France' },  { text: 'Spain' },  { text: 'Italy' } ] },
+    ],
+    uiLibrary: 'bootstrap',
     iconsLibrary: 'fontawesome',
-  checkboxes: true
+    border: true,
+    checkboxes: true
 });
+
+tree.expandAll();
 
 //$(document).ready(function(){
 //		var hasCheck = function(el) {
