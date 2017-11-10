@@ -17,6 +17,7 @@
         <!-- Global -->
         <link href="assets/css/bootstrap.css" rel="stylesheet">
         <link href="assets/css/custom.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -38,13 +39,16 @@
                 <div class="row">
                     <div class="col-xs-4">
                         <div class="row">
-                            <div class="h4 col-xs-8">選擇下載欄位</div>
+                            <div class="h4 col-xs-12">選擇下載欄位</div>
+<!--
                             <div class="checkbox col-xs-4 text-right">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="checkAll"/> 全選
                                 </label>
                             </div>
+-->
                         </div>
+<!--
                         <div class="panel-group" id="accordion">
                             <div class="panel panel-default">
                                 <div class="panel-heading" id="heading-1">
@@ -127,13 +131,15 @@
                                 </div>
                             </div>
                         </div>
+-->
+                        <div id="tree"></div>
                     </div>
                     <div class="col-xs-8">
                         <div class="h4">篩選條件</div>
                         <div class="btn-group">
-                            <button class="btn btn-default">清除條件</button>
-                            <button class="btn btn-default">儲存條件</button>
-                            <button class="btn btn-default">載入歷史條件</button>
+                            <button class="btn btn-default" type="button">清除條件</button>
+                            <button class="btn btn-default" type="button">儲存條件</button>
+                            <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseSQL">載入歷史條件</button>
                         </div>
                         <table class="table table-bordered table-condensed my-2">
                             <thead>
@@ -260,8 +266,99 @@
                                         <input type="text" class="form-control">
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td colspan="4" class="text-center">
+                                        <a class="btn btn-info" href="">
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
+                        <div class="collapse" id="collapseSQL">
+                            <table class="table table-bordered table-condensed my-2">
+                            <thead>
+                                <tr class="active">
+                                    <th class="text-center" width="15%">連接條件</th>
+                                    <th class="text-center">SQL語法</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="radio m-0">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="radio" id="radio1" value="option1">
+                                                AND
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" value="WHERE City = '台北市' AND Salary >= 50000;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="radio m-0">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="radio" id="radio1" value="option1">
+                                                AND
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" value="WHERE City = '台北市' AND Salary >= 50000;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="radio m-0">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="radio" id="radio1" value="option1">
+                                                AND
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" value="WHERE City = '台北市' AND Salary >= 50000;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="radio m-0">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="radio" id="radio1" value="option1">
+                                                AND
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" value="WHERE City = '台北市' AND Salary >= 50000;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="radio m-0">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="radio" id="radio1" value="option1">
+                                                AND
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" value="WHERE City = '台北市' AND Salary >= 50000;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="text-center">
+                                        <a class="btn btn-info" href="">
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
                         <p>
                             附加條件：<span class="text-danger">說明文字</span>
                         </p>
@@ -273,20 +370,38 @@
                             <button class="btn btn-default">清除</button>
                         </p>
                         <hr>
-                        <div class="form-inline my-2">
-                            <div class="form-group mr-4">
-                                <div class="checkbox m-0">
+                        <div class="my-2">
+                            <div class="form-group">
+                                <div class="checkbox">
                                     <label class="">
                                         <input type="checkbox" value="" checked>
                                         單位歸屬
                                     </label>
                                 </div>
                             </div>
-                            <div class="form-group mr-4">
-                                匯出資料
-                                <select class="form-control">
-                                    <option>請選擇</option>
-                                </select>
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label class="">
+                                        <input type="checkbox" value="">
+                                        匯出圖片
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label class="">
+                                        <input type="checkbox" value="">
+                                        匯出舊資料
+                                    </label>
+                                    <div class="ml-4">
+                                        <select class="form-control">
+                                            <option>請選擇</option>
+                                            <option>10106</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-primary">送出</button>
@@ -300,6 +415,7 @@
         <!-- Global -->
 		<script src="assets/js/vendor/jquery.min.js"></script>
         <script src="assets/js/vendor/bootstrap.min.js"></script>
+        <script src="assets/js/vendor/gijgo.min.js"></script>
         <script src="assets/js/custom.js"></script>
 
     </body>
